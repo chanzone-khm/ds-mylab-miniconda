@@ -4,8 +4,10 @@
 RUN apt-get -y update && apt-get -y upgrade
 
 # install basic packages
+RUN apt-get install -y sudo
+# おまじないでsudo でもっかいupdate ※curlのインストールが出来なかったため、sudo でupdate/upgradeを追加
+RUN sudo apt-get -y update && apt-get -y upgrade
 RUN apt-get install -y \
-  sudo \
   wget \
   bzip2 \
   vim \
