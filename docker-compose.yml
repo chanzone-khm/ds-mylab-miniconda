@@ -7,4 +7,6 @@ services:
       - '8888:8888' 
     volumes:
       - '.:/work'
+    environment:
+      - DISPLAY=${DISPLAY}
     #working_dir: /work
